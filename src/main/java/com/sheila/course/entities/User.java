@@ -1,4 +1,4 @@
-package com.sheila.curso.entities;
+package com.sheila.course.entities;
 
 import java.io.Serializable;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.sheila.curso.entities.enums;
+package com.sheila.course.entities.enums;
 
 public enum OrderStatus {
 

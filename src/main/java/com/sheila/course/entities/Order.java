@@ -1,4 +1,4 @@
-package com.sheila.curso.entities;
+package com.sheila.course.entities;
 
 import java.io.Serializable;
 import java.time.Instant;
@@ -12,7 +12,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.sheila.curso.entities.enums.OrderStatus;
+import com.sheila.course.entities.enums.OrderStatus;
 
 @Entity
 @Table(name = "tb_order")

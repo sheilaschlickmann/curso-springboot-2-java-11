@@ -1,4 +1,4 @@
-package com.sheila.curso.services;
+package com.sheila.course.services;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.sheila.curso.entities.Order;
-import com.sheila.curso.repositories.OrderRepository;
+import com.sheila.course.entities.Order;
+import com.sheila.course.repositories.OrderRepository;
 
 @Service
 public class OrderService {
