@@ -1,4 +1,4 @@
-package com.sheila.course.resource;
+package com.sheila.course.resources;
 
 import java.util.List;
 

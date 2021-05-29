@@ -1,4 +1,4 @@
-package com.sheila.course.resource;
+package com.sheila.course.resources;
 
 import java.net.URI;
 import java.util.List;
