@@ -6,12 +6,14 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import org.springframework.hateoas.RepresentationModel;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sheila.course.entities.pk.OrderItemPK;
 
 @Entity
 @Table(name = "tb_order_item")
-public class OrderItem implements Serializable {
+public class OrderItem extends RepresentationModel<OrderItem> implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 

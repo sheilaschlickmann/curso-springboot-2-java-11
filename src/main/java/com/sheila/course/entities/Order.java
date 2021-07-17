@@ -16,12 +16,14 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.springframework.hateoas.RepresentationModel;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.sheila.course.entities.enums.OrderStatus;
 
 @Entity
 @Table(name = "tb_order")
-public class Order implements Serializable {
+public class Order extends RepresentationModel<Order> implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 

@@ -1,5 +1,8 @@
 package com.sheila.course.resources;
 
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,12 +25,17 @@ public class CategoryResource {
 	@GetMapping
 	public ResponseEntity<List<Category>> findAll() {
 		List<Category> list = service.findAll();
+		for(Category category : list) {
+			long id = category.getId();
+			category.add(linkTo(methodOn(CategoryResource.class).findById(id)).withSelfRel());
+		}	
 		return ResponseEntity.ok().body(list);
 	}
 
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<Category> findById(@PathVariable Long id) {
 		Category obj = service.findById(id);
+		obj.add(linkTo(methodOn(CategoryResource.class).findAll()).withRel("Lista de Categorias"));
 		return ResponseEntity.ok().body(obj);
 	}
 
